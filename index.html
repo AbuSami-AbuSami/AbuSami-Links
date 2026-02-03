@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Accounts</title>
+
+<style>
+:root {
+  --bg:#0b0b0b;
+  --card:#151515;
+  --btn:#1f1f1f;
+  --text:#ffffff;
+}
+
+body.light {
+  --bg:#f1f1f1;
+  --card:#ffffff;
+  --btn:#e5e5e5;
+  --text:#000000;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: var(--btn);
+  border: none;
+  color: var(--text);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card {
+  width: 90%;
+  max-width: 360px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* GitHub icon */
+.github {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.github svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--text);
+  transition: 0.3s;
+}
+
+.github:hover svg {
+  opacity: 0.7;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #f5c400;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.btn {
+  display: block;
+  background: var(--btn);
+  color: var(--text);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 14px;
+  margin: 10px 0;
+  transition: 0.25s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  opacity: 0.85;
+}
+
+/* by 7n0z text */
+.by {
+  margin-top: 22px;
+}
+
+.by a {
+  color: var(--text);
+  text-decoration: underline;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<button class="toggle" onclick="toggleTheme()">🌓</button>
+
+<div class="card">
+
+  <!-- GitHub icon -->
+  <a class="github" href="https://github.com/7n0z" target="_blank">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 1.9 2.8 2.7.2-.7.4-1.1.7-1.4-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3 0 0 .9-.3 3 .1.9-.2 1.8-.3 2.7-.3s1.8.1 2.7.3c2.1-.4 3-.1 3-.1.6 1.5.2 2.7.1 3 .7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/>
+    </svg>
+  </a>
+
+  <!-- غير الصورة -->
+  <img src="avatar.png" class="avatar">
+
+  <h1>MY ACCOUNTS</h1>
+
+  <a class="btn" href="https://discord.com/users/1185240334767239268" target="_blank">Discord</a>
+  <a class="btn" href="https://github.com/7n0z" target="_blank">GitHub</a>
+  <a class="btn" href="https://discord.gg/valos" target="_blank">Valo Store</a>
+  <a class="btn" href="https://www.roblox.com/ar/users/4278280605/profile" target="_blank">Roblox</a>
+
+  <div class="by">
+    <a href="https://discord.com/users/1185240334767239268" target="_blank">
+      𝐛𝐲 𝟕ń𝟎𝐳 🇧🇹
+    </a>
+  </div>
+
+</div>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
